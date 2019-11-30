@@ -54,11 +54,11 @@ module.export = {
 Prop | Type | Required | Default | description
 -- | -- | -- | -- | --
 `class` | `string` | ❌ | ❌ | Outer class container
-`length` | `number | string` | ✔️ | `4` | Number of expected characters
+`length` | `number/string` | ✔️ | `4` | Number of expected characters
 `pattern` | `string` | ❌ | `[^0-9]+` | Regex pattern of individual character input
 `ignorePattern` | `boolean` | ❌ | `false` | Turn off character validation
 `fieldClass` | `string` | ❌ | ❌ | Custom class for each input character
-`size` | `string | number` | ❌ | `16` | Font size of input character (input size = 1.75 x font size).
+`size` | `number/string` | ❌ | `16` | Font size of input character (input size = 1.75 x font size).
 
 ## Contributions are welcome!
 
