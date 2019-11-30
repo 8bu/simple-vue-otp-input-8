@@ -10,6 +10,7 @@ export default class App extends Vue {
     return (
       <section class="app-container">
         <otp-input class="app-input" fieldClass="app-field" />
+        test
       </section>
     );
   }
