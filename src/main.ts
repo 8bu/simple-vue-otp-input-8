@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import OTPInput from '@8bu/vue-otp-input';
+import OTPInput from '@/entry';
 import App from './app';
 
 Vue.config.productionTip = false;

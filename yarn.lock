@@ -34,6 +34,17 @@
     vue-class-component "^7.0.2"
     vue-property-decorator "^8.3.0"
 
+"@8bu/vue-otp-input@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@8bu/vue-otp-input/-/vue-otp-input-1.0.3.tgz#ad19c32dfde1e15e1fb3b3b47a923b9238ec7a79"
+  integrity sha512-PGwbTO0zSy0GDkMmcvDaNXYyGQFoHwe/i2mRmsW+ubNVdbfBnqAzG9XFJJOKkAIfrrxeCDvEnBTsSZZ8/10FkQ==
+  dependencies:
+    "@8bu/vue-otp-input" "^1.0.2"
+    core-js "^3.4.3"
+    vue "^2.6.10"
+    vue-class-component "^7.0.2"
+    vue-property-decorator "^8.3.0"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz#bc0782f6d69f7b7d49531219699b988f669a8f9d"

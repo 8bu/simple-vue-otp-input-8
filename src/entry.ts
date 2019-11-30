@@ -1,26 +1,29 @@
+import _Vue, { VueConstructor } from 'vue';
 import OTPInput8 from './components/OTPInput/index';
 
-function install(Vue) {
+export function install(Vue: VueConstructor) {
   if ((install as any).installed) return;
   (install as any).installed = true;
   Vue.component('otp-input', OTPInput8);
 }
-
-const plugin = {
-  install,
-};
+declare global {
+  interface Window { Vue: typeof _Vue }
+}
 
 let GlobalVue = null;
 if (typeof window !== 'undefined') {
   GlobalVue = window.Vue;
 } else if (typeof global !== 'undefined') {
-  GlobalVue = (global as any).vue;
+  GlobalVue = global.vue;
+}
+
+class Plugin extends OTPInput8 {
+  static install = install;
 }
 
 if (GlobalVue) {
-  GlobalVue.use(plugin);
+  (GlobalVue as any).use(Plugin);
 }
 
-(OTPInput8 as any).install = install;
-
-export default component;
+export default Plugin;
+export { OTPInput8 };

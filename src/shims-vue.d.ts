@@ -3,3 +3,9 @@ declare module '*.vue' {
 
   export default Vue;
 }
+
+declare module NodeJS {
+  interface Global {
+    vue: typeof Vue;
+  }
+}
