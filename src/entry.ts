@@ -1,26 +1,26 @@
-
-import OurVue, { VueConstructor } from 'vue';
 import OTPInput8 from './components/OTPInput/index';
-import './components/OTPInput/index.scss';
 
-declare global {
-  interface Window { OTPInput8: any; Vue: typeof OurVue }
-}
-
-const install = (Vue: VueConstructor) => {
+function install(Vue) {
   if ((install as any).installed) return;
   (install as any).installed = true;
-  Vue.component(OTPInput8.name, OTPInput8);
-};
-
-const PluginOTPInput8 = {
-  install,
-};
-if (typeof window !== 'undefined' && window.Vue) {
-  window.OTPInput8 = OTPInput8;
-  window.Vue.use(PluginOTPInput8);
+  Vue.component('otp-input', OTPInput8);
 }
 
+const plugin = {
+  install,
+};
 
-export default PluginOTPInput8;
-export { OTPInput8 };
+let GlobalVue = null;
+if (typeof window !== 'undefined') {
+  GlobalVue = window.Vue;
+} else if (typeof global !== 'undefined') {
+  GlobalVue = (global as any).vue;
+}
+
+if (GlobalVue) {
+  GlobalVue.use(plugin);
+}
+
+(OTPInput8 as any).install = install;
+
+export default component;
