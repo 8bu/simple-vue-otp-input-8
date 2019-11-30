@@ -22,7 +22,8 @@
   ],
   "files": [
     "dist/*",
-    "*.json"
+    "*.json",
+    "types/*"
   ],
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -33,7 +34,7 @@
     "fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "@8bu/vue-otp-input": "^1.0.8",
+    "@8bu/vue-otp-input": "^1.0.1-a",
     "core-js": "^3.4.3",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
