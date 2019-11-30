@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@8bu/vue-otp-input@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@8bu/vue-otp-input/-/vue-otp-input-1.0.0.tgz#4d8ffe9d1388e89fbb092b2cbcb45246ca6d0367"
+  integrity sha512-KaaHLbsSToVzt0wN23FloX7vZj7Il4lWuY/VNJzfBLlpc4y7rWCXdDtO5li1bmrqICoJX53KrRUESuwHQi046w==
+  dependencies:
+    core-js "^3.4.3"
+    vue "^2.6.10"
+    vue-class-component "^7.0.2"
+    vue-property-decorator "^8.3.0"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz#bc0782f6d69f7b7d49531219699b988f669a8f9d"

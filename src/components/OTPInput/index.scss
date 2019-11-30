@@ -1,0 +1,22 @@
+.otp-input-8 {
+  display: block;
+  line-height: 1;
+  padding-left: 0;
+  margin: 0;
+  &-field {
+    display: inline-block;
+    vertical-align: top;
+    font-size: inherit;
+    overflow: hidden;
+    input {
+      border: 0;
+      box-sizing: border-box;
+      padding: 0;
+      width: 1.75em;
+      height: 1.75em;
+      font-size: inherit;
+      line-height: 1.75em;
+      text-align: center;
+    }
+  }
+}
