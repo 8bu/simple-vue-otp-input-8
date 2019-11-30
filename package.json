@@ -3,9 +3,9 @@
   "description": "Simple & Flexible OTP Style Input",
   "author": "8bu <nhvlongg@gmail.com>",
   "main": "dist/vue-otp-input.umd.js",
-  "types": "dist/vue-otp-input.d.ts",
+  "types": "types/vue-otp-input.d.ts",
   "unpkg": "dist/vue-otp-input.umd.min.js",
-  "version": "1.0.8",
+  "version": "1.0.1a",
   "private": false,
   "license": "MIT",
   "keywords": [
@@ -35,7 +35,7 @@
     "fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "@8bu/vue-otp-input": "^1.0.7",
+    "@8bu/vue-otp-input": "^1.0.8",
     "core-js": "^3.4.3",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
