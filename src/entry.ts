@@ -1,11 +1,15 @@
-import _Vue from 'vue';
+
+import OurVue, { VueConstructor } from 'vue';
 import OTPInput8 from './components/OTPInput/index';
+import './components/OTPInput/index.scss';
 
 declare global {
-  interface Window { OTPInput8: any; Vue: typeof _Vue }
+  interface Window { OTPInput8: any; Vue: typeof OurVue }
 }
 
-const install = (Vue: typeof _Vue) => {
+const install = (Vue: VueConstructor) => {
+  if ((install as any).installed) return;
+  (install as any).installed = true;
   Vue.component(OTPInput8.name, OTPInput8);
 };
 
