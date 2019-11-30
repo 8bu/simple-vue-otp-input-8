@@ -9,8 +9,7 @@ export default class App extends Vue {
   protected render() {
     return (
       <section class="app-container">
-        <otp-input class="app-input" fieldClass="app-field" />
-        test
+
       </section>
     );
   }
