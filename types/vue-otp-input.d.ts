@@ -1,10 +1,8 @@
 declare module '@8bu/vue-otp-input' {
-  import _Vue, { PluginFunction } from 'vue';
+  import _Vue, { PluginObject } from 'vue';
 
   class OTPInput8 extends _Vue { }
-  class Plugin extends OTPInput8 {
-    install: PluginFunction<any>;
-  }
-  export default Plugin;
+  const plugin: PluginObject<any>;
+  export default plugin;
   export { OTPInput8 };
 }

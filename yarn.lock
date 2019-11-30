@@ -34,6 +34,50 @@
     vue-class-component "^7.0.2"
     vue-property-decorator "^8.3.0"
 
+"@8bu/vue-otp-input@^1.0.1-b":
+  version "1.0.1-b"
+  resolved "https://registry.yarnpkg.com/@8bu/vue-otp-input/-/vue-otp-input-1.0.1-b.tgz#6ebe852dda38d23a41d6db87e9458dbfcb7737ef"
+  integrity sha512-l9lxD9TOv9yszQQlbj+60YKnsggw7FoZ4Hum7Ispu8e9MH5lqMi96SnR9KW+vjbtLiMzn5MuuBDCsaFkyi2WKQ==
+  dependencies:
+    "@8bu/vue-otp-input" "^1.0.1-a"
+    core-js "^3.4.3"
+    vue "^2.6.10"
+    vue-class-component "^7.0.2"
+    vue-property-decorator "^8.3.0"
+
+"@8bu/vue-otp-input@^1.0.1-c":
+  version "1.0.1-c"
+  resolved "https://registry.yarnpkg.com/@8bu/vue-otp-input/-/vue-otp-input-1.0.1-c.tgz#e3ec269b90bc5981fde2b32fc21ace459179f44b"
+  integrity sha512-sHwfZRT0HJ6yb0ZiBaFNMw6L2Xjo0eLyFRU3GGz9WQ2v1sy1vOyq00zM/DyCYzbynTxJzaLWPATR6H9PbbZPAQ==
+  dependencies:
+    "@8bu/vue-otp-input" "^1.0.1-b"
+    core-js "^3.4.3"
+    vue "^2.6.10"
+    vue-class-component "^7.0.2"
+    vue-property-decorator "^8.3.0"
+
+"@8bu/vue-otp-input@^1.0.1-d":
+  version "1.0.1-d"
+  resolved "https://registry.yarnpkg.com/@8bu/vue-otp-input/-/vue-otp-input-1.0.1-d.tgz#e95e9e170c77e61671d037a4d83ff3c3ab6be5b3"
+  integrity sha512-RLJ/ybQbVN2rtob8VCGjwi9Her9MjeLqVehnnEfJjNphYVMsUfWXL6cD7NfnS0pct+7/kdm+nLFb4pawZQe4XQ==
+  dependencies:
+    "@8bu/vue-otp-input" "^1.0.1-c"
+    core-js "^3.4.3"
+    vue "^2.6.10"
+    vue-class-component "^7.0.2"
+    vue-property-decorator "^8.3.0"
+
+"@8bu/vue-otp-input@^1.0.1-e":
+  version "1.0.1-e"
+  resolved "https://registry.yarnpkg.com/@8bu/vue-otp-input/-/vue-otp-input-1.0.1-e.tgz#1994a5687086078fda84ff4e6eb4921141bc3115"
+  integrity sha512-V6tOP+3JgnLiCVCWBofs/flqrCFuIvQ00CqK24vsuDpE4ti0mf9phpyTTlKnPdJhethQ484mer422OqRyNGH7A==
+  dependencies:
+    "@8bu/vue-otp-input" "^1.0.1-d"
+    core-js "^3.4.3"
+    vue "^2.6.10"
+    vue-class-component "^7.0.2"
+    vue-property-decorator "^8.3.0"
+
 "@8bu/vue-otp-input@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@8bu/vue-otp-input/-/vue-otp-input-1.0.2.tgz#fa4751023cfb3f696fbe4bd3ec9465a5118fa04e"
