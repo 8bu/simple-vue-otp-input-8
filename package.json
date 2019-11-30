@@ -5,7 +5,7 @@
   "main": "dist/vue-otp-input.umd.js",
   "types": "dist/vue-otp-input.d.ts",
   "unpkg": "dist/vue-otp-input.umd.min.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": false,
   "license": "MIT",
   "keywords": [
@@ -35,7 +35,7 @@
     "fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "@8bu/vue-otp-input": "^1.0.3",
+    "@8bu/vue-otp-input": "^1.0.4",
     "core-js": "^3.4.3",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
