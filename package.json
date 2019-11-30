@@ -5,7 +5,7 @@
   "main": "dist/vue-otp-input.umd.js",
   "types": "dist/vue-otp-input.d.ts",
   "unpkg": "dist/vue-otp-input.umd.min.js",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": false,
   "license": "MIT",
   "keywords": [
