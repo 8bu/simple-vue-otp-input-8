@@ -7,7 +7,7 @@
 
 
 > Only support Vue.js 2.2.x+
-
+> Current issues: v-model is one way binding from inside to outside... I forgot to update value when it passed down, lol. The other one that I found is it's bug when we have another element underneath, it won't show that element, idk why. But both of them will be fixed soon.
 ## Installation
 
 #### Global:
