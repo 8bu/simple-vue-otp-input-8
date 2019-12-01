@@ -6,6 +6,7 @@
 [![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
 
 
+> Only support Vue.js 2.2.x+
 
 ## Installation
 
@@ -39,19 +40,23 @@ module.export = {
 ```html
 <template>
   <otp-input
+    v-model="userToken"
     class="field-container"
     :length="6"
     pattern="[^0-9]+"
     :ignorePattern="false"
     fieldClass="custom-field-class"
     :size="32"
+    @valid="isTokenComplete"
   />
 </template>
 ```
 
 ## Properties
 
-Prop | Type | Required | Default | description
+> `v-model` is supported by default.
+
+Prop | Type | Required | Default | Description
 -- | -- | -- | -- | --
 `class` | `string` | ❌ | ❌ | Outer class container
 `length` | `number/string` | ✔️ | `4` | Number of expected characters
@@ -59,6 +64,13 @@ Prop | Type | Required | Default | description
 `ignorePattern` | `boolean` | ❌ | `false` | Turn off character validation
 `fieldClass` | `string` | ❌ | ❌ | Custom class for each input character
 `size` | `number/string` | ❌ | `16` | Font size of input character (input size = 1.75 x font size).
+
+## Event
+
+Name | Param: Type | Description
+-- | -- | --
+`change` | `value: string` | Return string result of user input
+`valid` | `isValid: boolean` | Validate whenever user input to see if the input have been fully filled.
 
 ## Contributions are welcome!
 
