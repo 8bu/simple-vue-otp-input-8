@@ -47,9 +47,18 @@ export default class OTPInput8 extends Vue {
 
   @Watch('inputArray')
   protected onInputArrChange(value: string[]) {
-    const inputString = value.join('');
-    this.$emit('change', inputString);
-    this.$emit('valid', inputString.length === this.length);
+    if (this.currentIndex > -1) {
+      const inputString = value.join('');
+      this.$emit('change', inputString);
+      this.$emit('valid', inputString.length === this.length);
+    }
+  }
+
+  @Watch('value')
+  protected onValueChange(val: string) {
+    if (this.currentIndex < 0) {
+      this.setStringValue(val);
+    }
   }
 
   protected render() {
@@ -104,10 +113,20 @@ export default class OTPInput8 extends Vue {
   private handlePaste(e: ClipboardEvent) {
     e.preventDefault();
     const pastedData = String((e.clipboardData as DataTransfer).getData('text/plain'));
-    const formattedData = !this.ignorePattern ? pastedData.replace(this.regexPattern, '') : pastedData;
-    const trimmedData = formattedData.slice(0, this.length - this.currentIndex).split('');
-    for (let i = 0; i < trimmedData.length; i += 1) {
-      this.$set(this.inputArray, this.currentIndex + i, trimmedData[i]);
+    this.setStringValue(pastedData);
+  }
+
+  private setStringValue(str: string) {
+    const normalizeIndex = this.currentIndex < 0 ? 0 : this.currentIndex;
+    const formattedData = !this.ignorePattern ? str.replace(this.regexPattern, '') : str;
+    const trimmedData = formattedData.slice(0, this.length - normalizeIndex).split('');
+    const lengthToLoop = this.currentIndex < 0 ? this.length : trimmedData.length;
+    for (let i = 0; i < lengthToLoop; i += 1) {
+      if (this.currentIndex < 0) {
+        this.$set(this.inputArray, normalizeIndex + i, trimmedData[i] || '');
+      } else {
+        this.$set(this.inputArray, normalizeIndex + i, trimmedData[i]);
+      }
     }
   }
 
