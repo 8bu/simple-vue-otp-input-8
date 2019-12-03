@@ -1,7 +1,6 @@
 import _Vue, { VueConstructor } from 'vue';
 import OTPInput8 from './components/OTPInput/index';
 import './components/OTPInput/index.scss';
-import '@babel/polyfill';
 
 export function install(Vue: VueConstructor) {
   if ((install as any).installed) return;

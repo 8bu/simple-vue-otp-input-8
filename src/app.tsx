@@ -9,7 +9,7 @@ import OTPInput8 from './components/OTPInput/index';
   },
 })
 export default class App extends Vue {
-  private token = '';
+  private token = '1234';
 
   protected render() {
     return (

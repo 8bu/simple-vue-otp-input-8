@@ -54,7 +54,7 @@ export default class OTPInput8 extends Vue {
     }
   }
 
-  @Watch('value')
+  @Watch('value', { immediate: true })
   protected onValueChange(val: string) {
     if (this.currentIndex < 0) {
       this.setStringValue(val);
