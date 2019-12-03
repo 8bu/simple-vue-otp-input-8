@@ -12,6 +12,8 @@
 
 ![alt text][exampleimg]
 
+### [Working demo](https://codepen.io/8ee/pen/NWPWEQN)
+
 ## Installation
 
 #### Global:
