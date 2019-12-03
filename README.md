@@ -8,7 +8,10 @@
 
 > Only support Vue.js 2.2.x+
 
-> Current issues: v-model is one way binding from inside to outside... I forgot to update value when it passed down, lol. The other one that I found is it's bug when we have another element underneath, it won't show that element, idk why. But both of them will be fixed soon.
+> Any polyfill error (missing functions...etc) can be fixed by import polyfill lib or config polyfill for webpack & babel. I removed all polyfill due to this [recommend](https://cli.vuejs.org/guide/browser-compatibility.html#polyfills-when-building-as-library-or-web-components)
+
+![alt text][exampleimg]
+
 ## Installation
 
 #### Global:
@@ -83,7 +86,7 @@ If you want to contribute to this please read the [Contribution guidelines](CONT
 [buymecoffeebadge]: https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg?style=flat-square&logo=buy-me-a-coffee
 [commits-shield]: https://img.shields.io/github/last-commit/8bu/simple-vue-otp-input-8?style=flat-square
 [commits]: https://github.com/8bu/simple-vue-otp-input-8/commits/master
-[exampleimg]: example.png
+[exampleimg]: https://i.imgur.com/9Lhb2bh.gif
 [license-shield]: https://img.shields.io/github/license/8bu/simple-vue-otp-input-8.svg?style=flat-square&logo=appveyor
 [releases-shield]: https://img.shields.io/npm/v/@8bu/vue-otp-input?style=flat-square
 [releases]: https://www.npmjs.com/package/@8bu/vue-otp-input
