@@ -21,15 +21,18 @@
 ```javascript
 // main
 import Vue from 'vue';
-import OTPInput from '@8bu/vue-otp-input';
-Vue.use(OTPInput);
+import OTPInput8 from '@8bu/vue-otp-input';
+import '@8bu/vue-otp-input/vue-otp-input.css';
+
+Vue.use(OTPInput8);
 
 ```
 ----------------
 #### Component:
 ```html
 <script>
-import OTPInput from '@8bu/vue-otp-input';
+import { OTPInput8 } from '@8bu/vue-otp-input';
+import '@8bu/vue-otp-input/vue-otp-input.css';
 
 module.export = {
   name: 'you-component',
