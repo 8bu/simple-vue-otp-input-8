@@ -16,7 +16,7 @@
 
 ## Installation
 
-#### Global:
+#### Global use:
 
 ```javascript
 // main
@@ -28,7 +28,7 @@ Vue.use(OTPInput8);
 
 ```
 ----------------
-#### Component:
+#### Use only inside a component:
 ```html
 <script>
 import { OTPInput8 } from '@8bu/vue-otp-input';
@@ -37,7 +37,7 @@ import '@8bu/vue-otp-input/vue-otp-input.css';
 module.export = {
   name: 'you-component',
   components: {
-    'otp-input': OTPInput,
+    'otp-input': OTPInput8,
   }
 }
 </script>
