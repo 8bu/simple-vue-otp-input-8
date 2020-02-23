@@ -16,28 +16,25 @@
 
 ## Installation
 
-#### Global use:
+#### Global:
 
 ```javascript
 // main
 import Vue from 'vue';
-import OTPInput8 from '@8bu/vue-otp-input';
-import '@8bu/vue-otp-input/vue-otp-input.css';
-
-Vue.use(OTPInput8);
+import OTPInput from '@8bu/vue-otp-input';
+Vue.use(OTPInput);
 
 ```
 ----------------
-#### Use only inside a component:
+#### Component:
 ```html
 <script>
-import { OTPInput8 } from '@8bu/vue-otp-input';
-import '@8bu/vue-otp-input/vue-otp-input.css';
-
+import OTPInput from '@8bu/vue-otp-input';
+import '@8bu/vue-otp-input/';
 module.export = {
   name: 'you-component',
   components: {
-    'otp-input': OTPInput8,
+    'otp-input': OTPInput,
   }
 }
 </script>
@@ -57,6 +54,7 @@ module.export = {
     fieldClass="custom-field-class"
     :size="32"
     @valid="isTokenComplete"
+    disabled={false}
   />
 </template>
 ```
@@ -73,6 +71,7 @@ Prop | Type | Required | Default | Description
 `ignorePattern` | `boolean` | ❌ | `false` | Turn off character validation
 `fieldClass` | `string` | ❌ | ❌ | Custom class for each input character
 `size` | `number/string` | ❌ | `16` | Font size of input character (input size = 1.75 x font size).
+`disabled` | `boolean` | ❌ | `false` | Working like native disabled
 
 ## Events
 

@@ -18,6 +18,8 @@ export default class OTPInput8 extends Vue {
 
   @Prop({ default: '[^0-9]+' }) private pattern!: string;
 
+  @Prop({ default: false }) private disabled!: string;
+
   @Prop({ default: false }) private ignorePattern!: boolean;
 
   @Prop({ default: '' }) private fieldClass!: string;
@@ -76,6 +78,7 @@ export default class OTPInput8 extends Vue {
                 key={index}
                 ref={`otpFields-${index}`}
                 required
+                disabled={this.disabled}
               />
             </li>
         ))}

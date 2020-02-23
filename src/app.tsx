@@ -14,7 +14,7 @@ export default class App extends Vue {
   protected render() {
     return (
       <section class="app-container">
-        <otp vModel={this.token} />
+        <otp vModel={this.token} disabled />
         <input type="text" vModel={this.token}/>
       </section>
     );
