@@ -3,4 +3,5 @@ export enum EKeyCode {
   DELETE = 46,
   LEFT_ARROW = 37,
   RIGHT_ARROW = 39,
+  ENTER = 13,
 }

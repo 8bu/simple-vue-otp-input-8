@@ -72,6 +72,7 @@ Prop | Type | Required | Default | Description
 `fieldClass` | `string` | ❌ | ❌ | Custom class for each input character
 `size` | `number/string` | ❌ | `16` | Font size of input character (input size = 1.75 x font size).
 `disabled` | `boolean` | ❌ | `false` | Working like native disabled
+`password` | `boolean` | ❌ | `false` | Change all input type to password
 
 ## Events
 
@@ -79,6 +80,18 @@ Name | Param: Type | Description
 -- | -- | --
 `change` | `value: string` | Return string result of user input
 `valid` | `isValid: boolean` | Validate whenever user input to see if the input have been fully filled.
+
+
+## Limitation
+Mobile devices may not have paste & backscape/delete feature. I'm working on another approach for this issue.
+
+## Change logs
+From v1.1.x++, I will note some simple change log to keep track my changes.
+
+### 1.2.0
+---------------------
+- Fix mobile input issue
+- Update new prop `password` for changing input type to password
 
 ## Contributions are welcome!
 

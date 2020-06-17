@@ -27,6 +27,8 @@ export default class OTPInput8 extends Vue {
 
   @Prop({ default: 16 }) private size!: number | string | boolean;
 
+  @Prop({ default: false }) private password!: boolean;
+
   private currentIndex: number = -1;
 
   private get regexPattern() {
@@ -75,10 +77,12 @@ export default class OTPInput8 extends Vue {
                 onBlur={this.handleBlur}
                 onPaste={this.handlePaste}
                 onkeydown={this.handleKey}
+                onInput={this.handleInput}
                 value={this.inputArray[index]}
                 key={index}
                 ref={`otpFields-${index}`}
                 required
+                type={this.password ? 'password' : 'text' }
                 disabled={this.disabled}
               />
             </li>
@@ -90,6 +94,10 @@ export default class OTPInput8 extends Vue {
   // Controls
   private updateByIndex(value: string) {
     this.$set(this.inputArray, this.currentIndex, value);
+  }
+
+  private getCurrentChar() {
+    return this.inputArray[this.currentIndex];
   }
 
   private goToPrev() {
@@ -134,12 +142,22 @@ export default class OTPInput8 extends Vue {
     }
   }
 
+  private handleInput(e: any) {
+    const stringKey = e.target.value.substr(-1);
+    const isValid = this.ignorePattern ? true : !stringKey.match(this.pattern);
+    if (isValid) {
+      this.updateByIndex(stringKey);
+      if (this.currentIndex + 1 < this.length) {
+        this.goToNext();
+      }
+    } else {
+      this.updateByIndex(this.getCurrentChar());
+    }
+  }
+
   private handleKey(e: KeyboardEvent) {
     if (!e.ctrlKey) {
-      e.preventDefault();
       const key = e.keyCode;
-      const stringKey = `${e.key}`;
-      const isValid = this.ignorePattern ? true : !stringKey.match(this.pattern);
       const hasValue = this.inputArray[this.currentIndex].length === 0;
       switch (key) {
         case EKeyCode.BACKSPACE:
@@ -159,13 +177,10 @@ export default class OTPInput8 extends Vue {
             this.goToNext();
           }
           break;
+        case EKeyCode.ENTER:
+          this.$emit('submit');
+          break;
         default:
-          if (isValid) {
-            this.updateByIndex(stringKey);
-            if (this.currentIndex + 1 < this.length) {
-              this.goToNext();
-            }
-          }
           break;
       }
     }

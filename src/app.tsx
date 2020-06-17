@@ -13,10 +13,16 @@ export default class App extends Vue {
 
   protected render() {
     return (
-      <section class="app-container">
-        <otp vModel={this.token} disabled />
+      <form class="app-container" onSubmit={this.onSubmit}>
+        <otp vModel={this.token} />
         <input type="text" vModel={this.token}/>
-      </section>
+      </form>
     );
+  }
+
+  private onSubmit() {
+    this.$emit('submit');
+    // eslint-disable-next-line
+    alert('SUBMIT');
   }
 }
