@@ -86,7 +86,12 @@ Name | Param: Type | Description
 Mobile devices may not have paste & backscape/delete feature. I'm working on another approach for this issue.
 
 ## Change logs
-From v1.1.x++, I will note some simple change log to keep track my changes.
+From v1.2.0+, I will note some simple change log to keep track my changes.
+
+### 1.2.1
+---------------------
+- Add `submit` event when user press `Enter`
+- Focus is now select a whole input field
 
 ### 1.2.0
 ---------------------

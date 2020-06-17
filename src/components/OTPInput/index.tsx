@@ -113,9 +113,12 @@ export default class OTPInput8 extends Vue {
   }
 
   // Event handlers
-  private handleFocus(e: Event) {
+  private handleFocus(e: any) {
     e.preventDefault();
     this.currentIndex = Number((e.target as HTMLInputElement).dataset.index);
+    e.target.select();
+    // Safari mobile support
+    e.target.setSelectionRange(0, e.target.value.length);
   }
 
   private handleBlur() {
