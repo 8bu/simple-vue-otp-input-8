@@ -2,6 +2,7 @@ import Vue from 'vue';
 import { Component, Prop, Watch } from 'vue-property-decorator';
 import { EKeyCode } from './index.helper';
 import './index.scss';
+
 @Component({
   name: 'otp-input',
   model: {
